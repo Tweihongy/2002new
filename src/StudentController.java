@@ -25,7 +25,7 @@ public class StudentController {
     public void withdrawCamp(StudentData user){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter camp name:");
-        String campName = scanner.nextLine(); 
+        String campName= scanner.nextLine(); 
         if (CampDB.camps.containsKey(campName)) {
             if(CampDB.camps.get(campName).getCampCommitteMembers().contains(user)){
                 System.out.println("Cannot leave camp, you are camp committee");
