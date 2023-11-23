@@ -36,6 +36,7 @@ public class CampsCSV {
                     System.err.println("Malformed data row: " + dataLine + dataParts.length);
                     continue; // Skip to the next row
                 }
+                
 
                 String campName = dataParts[0];
                 int campDate = Integer.parseInt(dataParts[1]);
