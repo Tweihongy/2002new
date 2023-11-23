@@ -21,27 +21,20 @@ public abstract class UI {
         switch(choice){
             case 1:
                 student.viewCamps();
-                System.out.println("1.View camps");
-
-
                 break;
             case 2:
                 student.registerCamp(studentdata);
-                System.out.println("2.Register camps");
                 break;
             case 3:
-                System.out.println("3.Register as camp committee");
+                student.registerAsCampCommitee(studentdata);
                 break;
             case 4:
-                System.out.println("4.Withdraw from camp");
-                
+                student.withdrawCamp(studentdata);
                 break;
             case 5:
-                System.out.println("5.Submit Enquires");
                 student.sendEnquire(studentdata);
                 break;
             case 6:
-                System.out.println("6.View your enquires");
                 student.viewEnquiries(studentdata);
                 break;
             case 7:

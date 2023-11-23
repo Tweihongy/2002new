@@ -24,6 +24,10 @@ public class StudentData extends UserData implements AddUserCSV{
         System.out.printf("%s [%s] created.\n","Student",userID);
     }
 
+    public void addCampRegistered(CampInfo campinfo){
+        campRegistered[][].
+    }
+
 
     public static boolean checkIfUserType(String userID , StudentDB Studentdb){
         if (Studentdb.students.containsKey(userID)){

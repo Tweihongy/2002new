@@ -12,9 +12,16 @@ public class StudentController {
         System.out.println("Enter camp name:");
         String campName = scanner.nextLine(); 
         if (CampDB.camps.containsKey(campName)) {
-           CampDB.camps.get(campName).decreaseRemainingSlots();
-            CampDB.camps.get(campName).addCampAttendees(user);
-            System.out.println("Camp registered");
+            if(CampDB.camps.get(campName).getRemainingSlots() == 0){
+                System.out.println("Camp Full");
+            }
+
+            else{
+                CampDB.camps.get(campName).decreaseRemainingSlots();
+                CampDB.camps.get(campName).addCampAttendees(user);
+            
+                System.out.println("Camp registered");
+            }
         }
         else{
             System.out.println("Camp not found");
@@ -43,10 +50,24 @@ public class StudentController {
 
     }
 
-    public void registerAsCampCommitee(CampInfo campName, StudentData user){
-        campName.decreaseCampComSlots();
-        campName.addCampCommittee(user);
-        user.registerCampCom(campName);
+    public void registerAsCampCommitee(StudentData user){
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter camp name:");
+        String campName1= scanner.nextLine();
+        if (CampDB.camps.containsKey(campName1)) {
+
+            CampInfo campName = CampDB.camps.get(campName1);
+            campName.decreaseCampComSlots();
+            campName.addCampCommittee(user);
+            user.registerCampCom(campName);
+
+        }
+        else{
+            System.out.println("Camp not found");
+            
+        }
+        
     }
 
     public void sendEnquire(UserData user){
