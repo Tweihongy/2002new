@@ -1,0 +1,8 @@
+campName,campDate,regisCloseDate,location,totalSlots,campDescription, staffInCharge,visibility,faculty
+SummerCamp2023,150323,100323,NTU NS,100,Fun-filled summer activities,HUKUMAR,true,SCSE
+WinterRetreat2023,100423,050423,NTU SS,80,Escape the winter blues,OURIN,true,EEE
+SpringAdventure2023,100523,050523,TAMA,120,Explore nature in spring,UPAM,false,SBS
+TechCamp2023,150723,100723,NORTH HILL,150,Immersive tech experiences,ANWIT,false,SCSE
+AutumnCamp2023,100823,050723,HALL 15,200,Hall 15 Autumn Camp,ANWIT,true,NTU
+NatureExplorers2023,150923,100923,BotanicGardens,80,Discover the wonders of nature,UPAM,true,SBS
+CodeFest2023,151023,101023,SouthSpine,120,Celebrating the art of coding,OURIN,true,EEE

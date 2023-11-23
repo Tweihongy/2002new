@@ -19,6 +19,8 @@ public class Main {
 
         Studentdatabase.initializeUserCSV();
         Staffdatabase.initializeUserCSV();
+        CampsCSV.initializeCampCSV();
+
 
         while(true) {
 
@@ -39,11 +41,14 @@ public class Main {
 
             }
             if(currentuser.getClass().equals(StaffData.class)) {
+                
+                StaffData currentstaff = (StaffData) currentuser;
 
                 System.out.println("welcome staff " + currentuser.getName());
                 CampControllerStaff userControl = new CampControllerStaff();
                 Scanner input2 = new Scanner (System.in);
-                UI.staffUI(userControl, currentuser, input2);
+
+                UI.staffUI(userControl, currentstaff, input2);
                 
                 
 

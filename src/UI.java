@@ -136,7 +136,7 @@ public abstract class UI {
     }
 
 
-    public static void staffUI(CampControllerStaff control, UserData staffdata, Scanner input2){
+    public static void staffUI(CampControllerStaff control, StaffData staffdata, Scanner input2){
 
         
         loop:

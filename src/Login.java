@@ -16,8 +16,8 @@ public class Login {
         String person = sc.next();
 
         //Check if user exist, if do, get respective object
-        if (StudentDB.students.containsKey(person)) userObj = StudentDB.students.get(person);
-        else if (StaffDB.staffs.containsKey(person)) userObj = StaffDB.staffs.get(person);
+        if (StudentDB.students.containsKey(person)) userObj = (StudentData)StudentDB.students.get(person);
+        else if (StaffDB.staffs.containsKey(person)) userObj = (StaffData)StaffDB.staffs.get(person);
         else System.out.println("User does not exist.");
 
         //If password = "password", must change password

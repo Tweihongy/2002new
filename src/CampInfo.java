@@ -28,7 +28,7 @@ public class CampInfo {
 
     // Constructor
     public CampInfo(String campName, int campDate, int regisCloseDate, String location, int totalSlots,
-                    int campComSlots, String campDescription, UserData staffInCharge, boolean visibility,
+                    int campComSlots, String campDescription, StaffData staffInCharge, boolean visibility,
                     String faculty) {
         this.campName = campName;
         this.campDate = campDate;
@@ -45,6 +45,10 @@ public class CampInfo {
 
     // Getter and Setter methods
     
+    public CampInfo(String campName2, int campDate2, int regisCloseDate2, String location2, int totalSlots2,
+            Object addCamp) {
+    }
+
     public String getCampName() {
         return campName;
     }

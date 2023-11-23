@@ -12,11 +12,11 @@ public class CampControllerStaff {
 	
     
     //methods
-    public void createCamp(String campName,int campDate, int regisCloseDate, String location, int totalSlots, int campComSlots, String campDescription, UserData staffInCharge, boolean visibility, String faculty) {
+    public void createCamp(String campName,int campDate, int regisCloseDate, String location, int totalSlots, int campComSlots, String campDescription, StaffData staffInCharge, boolean visibility, String faculty) {
 
 
         // Assuming CampDB.CampInfo is your class for camp information
-        CampInfo campInfo = new CampInfo(campName, campDate, regisCloseDate, location, totalSlots, campComSlots, campDescription, staffInCharge, visibility,faculty);
+        CampInfo campInfo = new CampInfo(campName, campDate, regisCloseDate, location, totalSlots, 10, campDescription, staffInCharge, visibility,faculty);
 
         // Add the camp to the CampDB
         CampDB.addCamp(campName, campInfo);
@@ -184,7 +184,7 @@ public class CampControllerStaff {
         System.out.println("8. Faculty");
     }
 
-    public void createCampUI(UserData staffdata, Scanner input2){
+    public void createCampUI(StaffData staffdata, Scanner input2){
                 
                 System.out.println("Input camp name");
                 String campName = input2.next(); // scanner
